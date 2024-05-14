@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Search for Products</h1>
+    <form action="/results" method="post">
+        <div>
+            <label for="keyword">Keyword:</label>
+            <input type="text" id="keyword" name="keyword">
+        </div>
+        <div>
+            <label for="number_of_pages">Number of Pages:</label>
+            <input type="text" id="number_of_pages" name="number_of_pages">
+        </div>
+        <h2>Filter by:</h2>
+        <div>
+            <label for="min_price">Min Price:</label>
+            <input type="text" id="min_price" name="min_price">
+        </div>
+        <div>
+            <label for="max_price">Max Price:</label>
+            <input type="text" id="max_price" name="max_price">
+        </div>
+        <div>
+            <label for="name_filter">Product Name:</label>
+            <input type="text" id="name_filter" name="name_filter">
+        </div>
+        <div>
+            <input type="submit" value="Search">
+        </div>
+    </form>
+</body>
+</html>
