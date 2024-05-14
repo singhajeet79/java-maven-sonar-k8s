@@ -1,8 +1,31 @@
 from flask import Flask, request, render_template
+from amazon_products import extract_data
 import pandas as pd
 from datetime import datetime
 
 app = Flask(__name__)
+
+@app.route('/')
+def search():
+    return render_template('search.html')
+
+@app.route('/results', methods=['POST'])
+def results():
+    keyword = request.from.get('keyword')
+    num_pages = request.form.get('num_pages')
+    min_price = request.form.get('min_price')
+    max_price = request.form.get('max_price')
+    filter_name = request.form.get('filter_name')
+
+    current date = datetime.datetime.now().strftime("%Y%m%d%H")
+
+    if keyword and num_pages:
+        products = extract_data(keyword, num_pages, current_date)    
+    elif min_price and max_price and filter_name:
+        products = pd.read_csv('price_change.csv')
+        products = products[(products['price'] >= min_price) & (products['price'] <= max_price)]    
+    else:
+        products = None
 
 def extract_data(keyword, number_of_pages, current_date):
     # Placeholder for data extraction logic
