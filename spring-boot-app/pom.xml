@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.abhishek</groupId>
-    <artifactId>spring-boot-demo</artifactId>
+    <groupId>com.e2c</groupId>
+    <artifactId>spring-boot-app</artifactId>
     <version>1.0</version>
 
-    <name>spring-boot-demo</name>
+    <name>spring-boot-app</name>
     <url></url>
 
     <parent>
